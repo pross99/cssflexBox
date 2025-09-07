@@ -1,11 +1,11 @@
 <script setup>
-
+import src from '../public/img/book.png'
 </script>
 
 <template>
     <nav >
         <div class="nav-containers" >
-            <img src="../img/book.png" id="logo"/>
+            <img :src id="logo"/>
             <p> BookenHagen My parent container uses flex to determine the width.</p>
             
         </div>
