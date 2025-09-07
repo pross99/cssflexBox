@@ -2,6 +2,7 @@
 import Main from '@/Main.vue'
 import Nav from '@/Navbar.vue'
 import Grid from '@/Grid.vue';
+import {RouterView} from 'vue-router'
 </script>
 
 <template>
@@ -9,11 +10,8 @@ import Grid from '@/Grid.vue';
  <Nav>
   </Nav>
   </header>
-  <Main>
-  </Main>
-  <Grid>
 
-  </Grid>
+  <RouterView />
 </template>
 
 <style >
