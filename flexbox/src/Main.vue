@@ -22,7 +22,7 @@
         </button>
     </div>
 
-    <div class="s-container">
+    <div class="s-container shrink">
          <h1>
             We are flex 1
         </h1>
@@ -31,10 +31,10 @@
         </p>
             <div class="button-row">
           <button id="flex-shrink">
-                I shrink first
+                I have flex-shrink 1
             </button>
-             <button id="flex-shrink0">
-                I will not shrink!
+             <button id="flex-shrink5">
+                I have flex-shrink 5
             </button>
             </div>
     </div>
@@ -72,24 +72,20 @@
 
     <div class="s-text" id="svh">
          <h1>
-            Hi There! With flex, I can easily adapt to screen widths. The following div is 100svh
+            The following div is 100svh
         </h1>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries.
+           A use case for 100svh if you have content that needs to be immediayely visible without scrolling, svh can be the better choice. 60 to 64 percent of all network traffic is from mobile phones.
+           In conclusion: If you need to guarantee that elements are fully visible within the smallest viewport, svh ensures compatibility:
         </p>
     </div>
 
     <div class="s-text" id="lvh">
         <h1>
-             Hi There! With flex, I can easily adapt to screen widths. The following div is 100lvh
+              The following div is 100lvh
         </h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            So 100lvh ensures your element always stretches to the full screen size, even if it means some content might be hidden by browser UI. Used for consisent layouts
           </p>
     </div>
 </section>
@@ -97,9 +93,9 @@
 
 
 <section>
-    <div class="s-container">
-        <h1> So why is the normal vw & vh troublesome?</h1>
-        <p> Phone UIs will have a browser that will take up space when landing on the home page. Also, when you scroll down the browser UI will become smaller, taking up less space. dvh and & dvh is also an option. However, many articles recommends not using this mesurment due to it being unstable EVEN WHEN THE viewport itself is unchanged.</p>
+    <div class="s-text" id="dvw">
+        <h1> I use 100dvw</h1>
+        <p> Phone UIs will have a browser that will take up space when landing on the home page. Also, when you scroll down the browser UI will become smaller, taking up less space. dvh and & dvh is also an option. However, many some articles recommends not using this mesurment due to it being unstable EVEN WHEN THE viewport itself is unchanged, while others recommends it for mobile-first development</p>
     </div>
 </section>
 
@@ -119,6 +115,7 @@
         flex: 1;
         flex-wrap: wrap;
         justify-content: center;
+        min-width: 300px;
          padding: 1rem;
     border-radius: 1rem;
     background-color: beige;
@@ -139,14 +136,35 @@
            display: flex;
            justify-content: left;
            padding: 0 2em;
+           
         }
        
     }
 
+ 
+
     .button-row{
         display: flex;
         flex-wrap: nowrap;
-    }
+        width: 400px;
+
+        button{
+        flex-grow: 1;
+        padding: 1rem;
+        border: 1px solid gray;
+      
+
+        &#flex-shrink{
+                flex-shrink: 1;
+       background-color: blue;
+        }
+
+        &#flex-shrink5{
+                flex-shrink: 5;
+                 background-color: red;
+                }
+            }
+        }
 
     .s-text{
         background-color: lightblue;
@@ -185,15 +203,9 @@
         flex-basis: 50%;
     }
 
-
-    #flex-shrink{
-        flex-shrink: 1;
-        flex-grow: 1;
-       
-    }
     #flex-shrink0{
-        flex-shrink: 2;
-        flex-grow: 1;
+        flex-shrink: 5;
+        background-color: red;
     
     }
 
@@ -201,11 +213,22 @@
         width: 100svw;
         height: 100svh;
         border: solid 1px blueviolet;
+        padding: 2svw;
     }
 
     #lvh{
         width: 100lvw;
         height: 100lvh;
+         padding: 2lvw;
         border: solid 1px red;
+        background-image: url(https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #dvw{
+        width: 100dvw;
+         padding: 2dvw;
     }
 </style>

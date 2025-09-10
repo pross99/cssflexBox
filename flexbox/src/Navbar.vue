@@ -6,7 +6,7 @@ import src from '../public/img/book.png'
     <nav >
         <div class="nav-containers" >
             <img :src id="logo"/>
-            <p> BookenHagen My parent container uses flex to determine the width.</p>
+            <p> BookenHagen My parent container uses flex to display content respnsively.</p>
             
         </div>
 
@@ -29,6 +29,7 @@ nav {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    background-color: beige;
 }
 
 .nav-containers{
@@ -42,7 +43,7 @@ nav {
 
     .btn{
         margin-left: auto;
-        width: 20em;
+        max-width: 20rem;
         flex: 1;
     }
 

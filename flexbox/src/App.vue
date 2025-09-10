@@ -16,12 +16,14 @@ import {RouterView} from 'vue-router'
 
 <style >
 
+
 h1{
    font-size: clamp(2rem, 3.5vw, 3.8rem);
    margin-bottom: 1rem;
 }
   p{
     font-size: clamp(1rem, 2.5vw, 2rem);
+   
   }
 
   button {
@@ -32,7 +34,6 @@ h1{
     letter-spacing: normal;
     font-size: clamp(1rem, 2.5vw, 2rem);
   }
-
 
 
 </style>

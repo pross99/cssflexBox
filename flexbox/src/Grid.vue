@@ -47,16 +47,19 @@
                 
             </div>
 
-            <div class="card">
+            <div class="card" id="fr">
                 <h1>CSS Grid Auto-Fit</h1>
                 <div>
                   <p>  The main grid uses <code>auto-fit</code> with <code>minmax()</code> to automatically adjust the number of columns based on available space. Items have a minimum width of 300px and grow to fill available space equally.</p>
+                  <p>What is fr in css? 1fr is one fraction of the available space. So if you have two columns within your grid and apply to the latter <code>grid-template-columns: 1fr 1fr; </code>  each columns will take one fraction of the grid container (so basically 50% each).
+                    <code> grid-template-columns: 2fr 1fr; </code>  would then mean the first child takes 2 fractions while the last child takes 1 fraction which would be 66% and 33%.
+ </p>
                 </div>
             </div>
 
             <div class="card">
                 <h1>Media Queries</h1>
-                <p>until now, no media queries have been used to help with CSS on different viewports. media quieries can however still be used for other usecasesr</p>
+                <p>until now, no media queries have been used to help with CSS on different viewports. media quieries can however still be used for other usecases</p>
             </div>
 
             <div class="card">
@@ -92,9 +95,17 @@ section{
 }
 
 .card{
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 1rem;
     background-color: beige;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+
+
+    :hover{
+         transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            }
 }
 
 .video-responsive{
@@ -115,6 +126,10 @@ section{
             }
 }
 
+
+#fr{
+     grid-template-columns: (auto-fit, minmax(300px, 2fr));
+}
 
 
 
@@ -155,8 +170,9 @@ section{
                 border: 1px solid #ccc;
             }
             
-            .breakpoint-indicator {
-                display: none;
-            }
+
         }
+
+
+    
 </style>
