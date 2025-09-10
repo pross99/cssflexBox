@@ -127,9 +127,6 @@ section{
 }
 
 
-#fr{
-     grid-template-columns: (auto-fit, minmax(300px, 2fr));
-}
 
 
 
@@ -152,9 +149,9 @@ section{
 
   @media (prefers-reduced-motion: reduce) {
             * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+                    animation: dissolve 4s linear infinite both;
+    background-color: green;
+    text-decoration: overline;
             }
         }
 
