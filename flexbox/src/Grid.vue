@@ -123,6 +123,14 @@ section{
             height: 100%;
             border: none;
             border-radius: 10px; 
+
+             :hover{
+              transition: none !important; 
+            }
+            }
+
+            :hover{
+              transform: none !important;
             }
 }
 
